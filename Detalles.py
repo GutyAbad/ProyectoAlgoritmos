@@ -1,3 +1,5 @@
+from utils import get_api_data, cargar_nacionalidades, mostrar_imagen_pillow
+
 def mostrar_detalles_obra(self):
     try:
         object_id = int(input("Ingrese el ID de la obra para ver sus detalles: "))
