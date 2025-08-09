@@ -1,4 +1,5 @@
 def buscar_por_departamento(self):
+  def buscar_por_departamento(self):
     print("\n--- Departamentos del Museo ---")
     for dep_id, dep_name in self.departamentos.items():
         print(f"ID: {dep_id} | Departamento: {dep_name}")
@@ -20,4 +21,3 @@ def buscar_por_departamento(self):
 
     except ValueError:
         print("Por favor, ingrese un número válido para el ID del departamento.")
-
