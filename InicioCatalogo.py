@@ -16,6 +16,3 @@ class CatalogoMet:
         data = get_api_data("departments")
         if data and "departments" in data:
             self.departamentos = {d["departmentId"]: d["displayName"] for d in data["departments"]}
-
-
-
