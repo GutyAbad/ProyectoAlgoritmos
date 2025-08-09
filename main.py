@@ -1,8 +1,8 @@
-from catalogo_met import CatalogoMet
-
+from inicioCatalogo import CatalogoMet
+ 
 def main():
     catalogo = CatalogoMet()
-
+ 
     while True:
         print("\n--- Menú Principal del Catálogo ---")
         print("1. Ver lista de obras por Departamento")
@@ -11,9 +11,9 @@ def main():
         print("4. Mostrar detalles de una obra por ID")
         print("5. Salir")
         print("----------------------------------\n")
-
+ 
         opcion = input("Seleccione una opción (1-5): ")
-
+ 
         if opcion == '1':
             catalogo.buscar_por_departamento()
         elif opcion == '2':
@@ -27,6 +27,6 @@ def main():
             break
         else:
             print("Opción no válida. Por favor, intente de nuevo.")
-
+ 
 if __name__ == "__main__":
     main()
