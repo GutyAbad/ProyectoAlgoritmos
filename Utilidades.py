@@ -2,10 +2,10 @@ import requests
 import csv
 from PIL import Image
 from io import BytesIO
-
+ 
 API_URL_BASE = "https://collectionapi.metmuseum.org/public/collection/v1"
 NATIONALITIES_URL = "https://drive.google.com/uc?export=download&id=1tJEU6_VEeO6xFH8fssSfkw4M8MaN6U5A"
-
+ 
 def get_api_data(endpoint: str, params: dict = None) -> dict:
     url = f"{API_URL_BASE}/{endpoint}"
     try:
@@ -15,7 +15,7 @@ def get_api_data(endpoint: str, params: dict = None) -> dict:
     except requests.exceptions.RequestException as e:
         print(f"Error al conectar con la API: {e}")
         return None
-
+ 
 def cargar_nacionalidades():
     try:
         response = requests.get(NATIONALITIES_URL)
@@ -26,7 +26,7 @@ def cargar_nacionalidades():
     except requests.exceptions.RequestException as e:
         print(f"Error al descargar la lista de nacionalidades: {e}")
         return []
-
+ 
 def mostrar_imagen_pillow(url: str, title: str):
     print(f"Cargando imagen para '{title}'...")
     try:
@@ -39,4 +39,3 @@ def mostrar_imagen_pillow(url: str, title: str):
         print(f"Error al descargar la imagen: {e}")
     except IOError as e:
         print(f"Error al abrir la imagen con Pillow: {e}")
-
