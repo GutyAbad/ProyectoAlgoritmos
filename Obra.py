@@ -1,5 +1,5 @@
 class ObraDeArte:
-
+ 
     def __init__(self, object_id: int, title: str, artist_name: str,
                  artist_nationality: str, artist_begin_date: str,
                  artist_end_date: str, classification: str, object_date: str,
@@ -14,7 +14,7 @@ class ObraDeArte:
         self.classification = classification
         self.object_date = object_date
         self.image_url = image_url
-
+ 
     def __str__(self):
        
         return (
