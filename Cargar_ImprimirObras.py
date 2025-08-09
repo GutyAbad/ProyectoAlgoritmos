@@ -22,6 +22,7 @@ def _cargar_obras_iniciales(self):
                         self.obras.append(obra)
 
 def _imprimir_listado_obras(self, obras_encontradas: list):
+        
         if not obras_encontradas:
             print("No se encontraron obras que cumplan con la condición.")
             return
